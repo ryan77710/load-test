@@ -12,16 +12,19 @@ body {
   display: none;
 }
 
-.chartWrapper {
+.chartWrapper,
+.chartResultAreaWrapper {
   position: relative;
   overflow: hidden;
 }
-.chartWrapper > canvas {
+.chartWrapper > canvas,
+.chartResultAreaWrapper > canvas {
   width: 1500px;
   height: 400px;
   border: red 2px solid;
 }
-.chartAreaWrapper {
+.chartAreaWrapper,
+.chartResultAreaWrapper {
   width: 800px;
   height: 500px;
   display: flex;

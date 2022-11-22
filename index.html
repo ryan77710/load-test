@@ -12,8 +12,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ilab live</title>
-    <script type="text/javascript" src="index.js"></script>
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+    <script type="text/javascript" src="jstest.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0/dist/chartjs-plugin-streaming.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.1.0/dist/chartjs-adapter-luxon.min.js"></script>
   </head>
   <body>
     <h1>ilab live</h1>
@@ -121,10 +125,14 @@
           </div>
         </article>
       </section>
-      <section>
+      <!-- <section>
         <h2>result</h2>
-        <article></article>
-      </section>
+        <article>
+          <div class="chartResultAreaWrapper">
+            <canvas id="myChartResult"></canvas>
+          </div>
+        </article>
+      </section> -->
     </main>
   </body>
 </html>

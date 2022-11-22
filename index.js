@@ -34,7 +34,7 @@ const classNameChange = (link) => {
   }
 };
 
-const maxScale = 100;
+const maxScale = 35;
 const minScale = 0;
 
 const leftScroll = (myChart, maxScale) => {
@@ -151,14 +151,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
       } else {
         addData(myChart, String(second), { time: second, value: { value: getRandomIntInclusive(1, 20), q: 3 } });
       }
-      // if (scrollCounter === 35) {
-      //   rightScroll(myChart, maxScale);
-      //   myChart.update();
-      //   scrollCounter = 0;
-      // }
+      if (scrollCounter === 35) {
+        rightScroll(myChart, maxScale);
+        myChart.update();
+        scrollCounter = 0;
+      }
       second++;
-      // scrollCounter++;
-    }, 300);
+      scrollCounter++;
+    }, 1000);
   });
   const ctx = document.getElementById("myChart").getContext("2d");
 
@@ -179,7 +179,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
           // spanGaps: false,
           segment: {
             borderColor: (context) => {
-              console.log(context);
               if (context.p0.raw.value.q === 3) {
                 return "lightgreen";
               } else if (context.p0.raw.value.q === 2) {
@@ -192,6 +191,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     },
     options: {
       // animation: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: "bottom",
+          align: "start",
+        },
+      },
       scales: {
         y: {
           beginAtZero: true,
@@ -206,8 +212,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
         x: {
           autoSkip: false,
           tacked: false,
-          // max: maxScale,
-          // min: minScale,
+          max: maxScale,
+          min: minScale,
         },
       },
       parsing: {
