@@ -174,7 +174,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const action = (myChartResult) => {
     myChart.options.plugins.streaming.pause = !myChart.options.plugins.streaming.pause;
     myChart.update();
-    const secondDuration = 2;
+    const secondDuration = 20;
     const timeduration = secondDuration - 1;
     const dateStart = Date.now();
 
