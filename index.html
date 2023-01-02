@@ -13,20 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ilab live</title>
     <!-- <script type="text/javascript" src="index.js"></script> -->
-    <script type="text/javascript" src="jstest.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0/dist/chartjs-plugin-streaming.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.1.0/dist/chartjs-adapter-luxon.min.js"></script>
   </head>
   <body>
-    <h1>ilab live</h1>
-    <nav>
-      <a href="">setup</a>
-      <a href="">load</a>
-      <a href="">result</a>
-    </nav>
-    <main>
+    <main class="m-auto">
       <button>export data subject</button>
       <button>export data group</button>
       <section>
@@ -55,7 +49,7 @@
           </form>
           <div class="d-flex">
             <div class="connect-container">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGpT1jAsQC66pDY3qm_CnsJBP39hR381Ms0g&usqp=CAU" alt="" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGpT1jAsQC66pDY3qm_CnsJBP39hR381Ms0g&usqp=CAU" alt="oks" />
               <button class="btn-success" id="start-load">connect</button>
               <button class="btn-danger hide" id="connected">connected</button>
               <div id="connect-loader" class="hide">
@@ -125,12 +119,12 @@
           </div>
         </article>
       </section>
-      <section>
+      <section id="chart-result-section" class="hide" class="mb-4">
         <h2>result</h2>
         <article>
           <div class="chartResultAreaWrapper">
             <canvas id="myChartResult"></canvas>
-            <div class="button-container">
+            <div class="button-container mb-2">
               <div id="bef-180">
                 <span><</span>
                 <button class="button-span">30 min</button>
@@ -154,6 +148,32 @@
               <div id="aft-180">
                 <span>></span>
                 <button class="button-span">30 min</button>
+              </div>
+            </div>
+            <div class="quality-button mb-2">
+              <div class="btn btn-success" id="good-l">
+                <span><</span>
+                <button class="button-span">good</button>
+              </div>
+              <div class="btn btn-warning" id="medium-l">
+                <span><</span>
+                <button class="button-span">medium</button>
+              </div>
+              <div class="btn btn-danger" id="bad-l">
+                <span><</span>
+                <button class="button-span">bad</button>
+              </div>
+              <div class="btn btn-danger" id="bad-r">
+                <span>></span>
+                <button class="button-span">bad</button>
+              </div>
+              <div class="btn btn-warning" id="medium-r">
+                <span>></span>
+                <button class="button-span">medium</button>
+              </div>
+              <div class="btn btn-success" id="good-r">
+                <span>></span>
+                <button class="button-span">good</button>
               </div>
             </div>
           </div>

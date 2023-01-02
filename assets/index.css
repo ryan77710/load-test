@@ -3,6 +3,9 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+section {
+  margin: 0 auto;
+}
 .connect-container {
   display: flex;
   flex-direction: column;
@@ -25,16 +28,16 @@ body {
 .chartWrapper > canvas,
 .chartResultAreaWrapper > canvas {
   width: 1500px;
-  height: 400px;
+  /* height: 400px; */
   /* border: red 2px solid; */
 }
 .chartAreaWrapper,
 .chartResultAreaWrapper {
   width: 800px;
-  height: 500px;
+  /* height: 500px; */
   display: flex;
   overflow: hidden;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 .connect-link-container {
@@ -189,7 +192,8 @@ body {
   }
 }
 
-.button-container {
+.button-container,
+.quality-button {
   display: flex;
   justify-content: space-evenly;
 }
@@ -211,7 +215,7 @@ body {
 .button-container > div:hover .button-span {
   color: aliceblue;
 }
-
+.quality-button > div > button,
 .button-container > div > button {
   border: none;
   background-color: transparent;
